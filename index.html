@@ -71,4 +71,119 @@
             align-items: center;
             gap: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        /* FOOTER */
+        footer { background: #222; color: #fff; padding: 40px 0 20px; margin-top: 40px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .footer-bottom { text-align: center; padding-top: 20px; margin-top: 30px; border-top: 1px solid #444; font-size: 13px; color: #aaa; }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            main.container { flex-direction: column; }
+            .header-contact { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://zalo.me/0972413145" target="_blank" class="zalo-float">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="30" height="30" alt="zalo">
+        Chat Zalo ngay
+    </a>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">TUẤN HÙNG <span>DỊCH VỤ SƠN NHÀ ĐÀ NẴNG</span></div>
+                <div class="header-contact">
+                    <a href="https://zalo.me/0972413145" class="btn-zalo-top"><i class="fab fa-zalo"></i> Zalo: 0972.413.145</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="main-menu">
+                    <li><a href="index.html">TRANG CHỦ</a></li>
+                    <li><a href="#">DỊCH VỤ</a></li>
+                    <li><a href="#">BÁO GIÁ</a></li>
+                    <li><a href="#">LIÊN HỆ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">Trang chủ / Báo giá sơn nhà Đà Nẵng</div>
+    </div>
+
+    <main class="container">
+        <div class="content-area">
+            <h1>Thợ Sơn Nhà Trọn Gói Đà Nẵng – Tuấn Hùng</h1>
+            <div class="intro-card">
+                <p>Chào mừng quý khách đến với dịch vụ sơn nhà <strong>Tuấn Hùng</strong>. Chúng tôi chuyên thi công sơn nước, chống thấm chuyên nghiệp tại khu vực Đà Nẵng với giá thành cạnh tranh nhất.</p>
+            </div>
+
+            <h2>Các Mẫu Sơn Phổ Biến</h2>
+            <div class="paint-grid">
+                <div class="paint-item">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80" alt="nội thất">
+                    <h4>Sơn Nội Thất</h4>
+                </div>
+                <div class="paint-item">
+                    <img src="https://images.unsplash.com/photo-1513584684374-8bdb7483bd8f?auto=format&fit=crop&w=400&q=80" alt="ngoại thất">
+                    <h4>Sơn Ngoại Thất</h4>
+                </div>
+                <div class="paint-item">
+                    <img src="https://images.unsplash.com/photo-1621506289937-4834b5ae093b?auto=format&fit=crop&w=400&q=80" alt="giả đá">
+                    <h4>Sơn Giả Đá</h4>
+                </div>
+            </div>
+
+            <h2>Bảng Giá Tham Khảo 2026</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dịch Vụ</th>
+                        <th>Giá (m2)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sơn nội thất kinh tế</td><td>35.000đ</td></tr>
+                    <tr><td>Sơn nội thất cao cấp</td><td>60.000đ</td></tr>
+                    <tr><td>Sơn chống thấm màu</td><td>75.000đ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>LIÊN HỆ</h3>
+                <p><i class="fa fa-phone"></i> 0972.413.145</p>
+                <p><i class="fa fa-map-marker"></i> TP. Đà Nẵng</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Sơn Tuấn Hùng</h4>
+                    <p>Uy tín tạo niềm tin - Chất lượng tạo thương hiệu.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                Bản quyền © 2026 Tuấn Hùng Đà Nẵng.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
