@@ -3,18 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thợ Sơn Nhà Đà Nẵng - Tân Hùng Cường</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Thợ Sơn Nhà Đà Nẵng - Tuấn Hùng</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- Reset & Base Styles --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background-color: #f4f7f6; }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Header --- */
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .top-bar { padding: 15px 0; border-bottom: 1px solid #eee; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        
+        .logo { font-size: 26px; font-weight: 800; color: #e63946; letter-spacing: -1px; }
+        .header-contact { display: flex; align-items: center; gap: 20px; }
+        .header-contact span { font-weight: bold; color: #1d3557; }
+        
+        .btn-register { background: #f4a261; color: #fff; padding: 8px 18px; border-radius: 4px; font-size: 14px; font-weight: 600; }
+        .btn-register:hover { background: #e76f51; }
+
+        /* Navigation */
+        nav { background: #1d3557; padding: 12px 0; }
+        .main-menu { display: flex; justify-content: center; gap: 25px; }
+        .main-menu a { color: #f1faee; font-size: 13px; font-weight: 600; text-transform: uppercase; }
+        .main-menu a:hover { color: #a8dadc; }
+
+        /* --- Content Area --- */
+        .breadcrumb { background: #e9ecef; padding: 12px 0; font-size: 13px; color: #6c757d; }
+        main.container { display: grid; grid-template-columns: 2.5fr 1fr; gap: 30px; padding: 40px 20px; }
+
+        .content-area h1 { color: #1d3557; margin-bottom: 20px; font-size: 28px; }
+        .intro-text { font-size: 17px; padding: 20px; background: #fff; border-left: 5px solid #e63946; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 30px; }
+
+        .info-box { background: #f1faee; padding: 20px; border-radius: 8px; border: 1px solid #a8dadc; margin: 25px 0; }
+        .info-box h3 { color: #457b9d; margin-bottom: 10px; }
+
+        /* Table */
+        .price-table { width: 100%; border-collapse: collapse; background: #fff; margin-top: 20px; }
+        .price-table th, .price-table td { padding: 12px; border: 1px solid #dee2e6; text-align: left; }
+        .price-table th { background: #457b9d; color: #fff; }
+        .price-table tr:nth-child(even) { background: #f8f9fa; }
+
+        /* Sidebar */
+        .widget { background: #fff; padding: 20px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .widget h3 { font-size: 16px; margin-bottom: 15px; border-bottom: 2px solid #e63946; padding-bottom: 5px; display: inline-block; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tags li { background: #f1faee; padding: 5px 12px; border-radius: 20px; font-size: 12px; color: #457b9d; border: 1px solid #a8dadc; }
+
+        /* Footer */
+        footer { background: #1d3557; color: #f1faee; padding: 50px 0 0; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; padding-bottom: 40px; }
+        .footer-col h4 { margin-bottom: 20px; color: #a8dadc; }
+        .footer-col p, .footer-col a { color: #ced4da; font-size: 14px; margin-bottom: 10px; display: block; }
+        .footer-bottom { background: #152942; padding: 20px; text-align: center; font-size: 13px; color: #888; }
+
+        @media (max-width: 768px) {
+            main.container { grid-template-columns: 1fr; }
+            .header-contact { display: none; }
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="top-bar">
             <div class="container">
-                <div class="logo">TÂN HÙNG CƯỜNG</div>
+                <div class="logo">TUẤN HÙNG</div>
                 <div class="header-contact">
-                    <span><i class="fas fa-phone"></i> O972413145</span>
+                    <span><i class="fas fa-phone"></i> 0972413145</span>
                     <a href="#" class="btn-register">ĐĂNG KÝ DỊCH VỤ</a>
                 </div>
             </div>
@@ -23,10 +84,10 @@
             <div class="container">
                 <ul class="main-menu">
                     <li><a href="#">HOME</a></li>
-                    <li><a href="#">SẢN PHẨM <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">THIẾT KẾ NỘI THẤT <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">THI CÔNG NỘI THẤT <i class="fas fa-chevron-down"></i></a></li>
-                    <li><a href="#">KIẾN TRÚC - XÂY DỰNG <i class="fas fa-chevron-down"></i></a></li>
+                    <li><a href="#">SẢN PHẨM</a></li>
+                    <li><a href="#">THIẾT KẾ</a></li>
+                    <li><a href="#">THI CÔNG</a></li>
+                    <li><a href="#">KIẾN TRÚC</a></li>
                     <li><a href="#">DỰ ÁN</a></li>
                     <li><a href="#">TIN TỨC</a></li>
                 </ul>
@@ -36,20 +97,20 @@
 
     <div class="breadcrumb">
         <div class="container">
-            Trang chủ / Tin Tức / Blog Kiến Trúc / Sơn Nhà / <strong>Thợ Sơn Nhà Đà Nẵng</strong>
+            Trang chủ / Tin Tức / Blog / Sơn Nhà / <strong>Thợ Sơn Nhà Đà Nẵng</strong>
         </div>
     </div>
 
     <main class="container">
         <article class="content-area">
-            <h1>Thợ Sơn Nhà Trọn Gói Đà Nẵng – Báo giá thi công sơn bả</h1>
+            <h1>Thợ Sơn Nhà Trọn Gói Đà Nẵng – Báo giá thi công Tuấn Hùng</h1>
             <p class="intro-text">
-                Đơn vị chúng tôi chuyên cung cấp dịch vụ sơn nước tại Đà Nẵng uy tín, chất lượng, quy trình làm việc chuyên nghiệp, đúng tiến độ, giá tốt nhất thị trường.
+                Đơn vị Tuấn Hùng chuyên cung cấp dịch vụ sơn nước tại Đà Nẵng uy tín, chất lượng, quy trình làm việc chuyên nghiệp, đúng tiến độ.
             </p>
 
             <section class="service-details">
-                <h2>Dịch vụ sơn nước tại Đà Nẵng uy tín, giá tốt</h2>
-                <p>Sơn nhà là công đoạn vô cùng quan trọng trước khi hoàn thành mỗi công trình xây dựng. Lớp sơn có độ che phủ, bám dính tốt thì mới bảo vệ căn nhà của bạn khỏi những tác động xấu của môi trường.</p>
+                <h2>Dịch vụ sơn nước chuyên nghiệp</h2>
+                <p>Lớp sơn có độ che phủ tốt mới bảo vệ căn nhà của bạn khỏi những tác động xấu của môi trường. Tuấn Hùng cam kết mang lại vẻ đẹp bền vững cho công trình.</p>
                 
                 <div class="info-box">
                     <h3>Địa Bàn Phục Vụ Tại Đà Nẵng:</h3>
@@ -60,7 +121,7 @@
                     </ul>
                 </div>
 
-                <h2>Bảng giá sơn nước tham khảo</h2>
+                <h2>Bảng giá sơn nước 2026</h2>
                 <table class="price-table">
                     <thead>
                         <tr>
@@ -69,18 +130,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Sơn lại nhà trọn gói (Nội thất)</td>
-                            <td>30.000 - 60.000đ</td>
-                        </tr>
-                        <tr>
-                            <td>Sơn lại nhà trọn gói (Ngoại thất)</td>
-                            <td>35.000 - 70.000đ</td>
-                        </tr>
-                        <tr>
-                            <td>Nhân công sơn nhà</td>
-                            <td>10.000 - 15.000đ</td>
-                        </tr>
+                        <tr><td>Sơn lại nội thất</td><td>30.000 - 60.000đ</td></tr>
+                        <tr><td>Sơn lại ngoại thất</td><td>35.000 - 70.000đ</td></tr>
+                        <tr><td>Nhân công sơn</td><td>10.000 - 15.000đ</td></tr>
                     </tbody>
                 </table>
             </section>
@@ -90,7 +142,7 @@
             <div class="widget">
                 <h3>HỖ TRỢ TRỰC TUYẾN</h3>
                 <p><i class="fas fa-headset"></i> Hotline: 0962022776</p>
-                <p><i class="fas fa-envelope"></i> contact@tanhungcuong.com.vn</p>
+                <p><i class="fas fa-envelope"></i> contact@tuanhung.com.vn</p>
             </div>
             <div class="widget">
                 <h3>TÌM KIẾM NHIỀU</h3>
@@ -106,28 +158,24 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <h4>CÔNG TY TÂN HÙNG CƯỜNG</h4>
+                <h4>CÔNG TY TUẤN HÙNG</h4>
                 <p>Văn Phòng: 36 Ngõ 157B Chùa Láng, Đống Đa, Hà Nội</p>
                 <p>Hotline: 0972413145</p>
             </div>
             <div class="footer-col">
                 <h4>THÔNG TIN</h4>
-                <ul>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Tuyển dụng</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                </ul>
+                <a href="#">Giới thiệu</a>
+                <a href="#">Tuyển dụng</a>
+                <a href="#">Liên hệ</a>
             </div>
             <div class="footer-col">
                 <h4>HỖ TRỢ</h4>
-                <ul>
-                    <li><a href="#">Chính sách bảo mật</a></li>
-                    <li><a href="#">Hướng dẫn mua hàng</a></li>
-                </ul>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Hướng dẫn mua hàng</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Bản quyền thuộc 2026 © tanhungcuong.com.vn</p>
+            <p>Bản quyền thuộc 2026 © tuanhung.com.vn</p>
         </div>
     </footer>
 
