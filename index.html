@@ -4,254 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUẤN HÙNG - Trần Nano & Cửa Thép Vân Gỗ Alux</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS RESET & BASE */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* --- CSS BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #fff; scroll-behavior: smooth; }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #ffffff;
-            scroll-behavior: smooth;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* HEADER & NAVIGATION */
+        /* --- HEADER --- */
         header {
-            background: #ffffff;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            background: #fff; height: 90px; display: flex; align-items: center;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;
         }
+        nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo-box .brand { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 800; color: #1a1a1a; line-height: 1; }
+        .logo-box .brand span { color: #b8860b; }
+        .logo-box .slogan { font-size: 11px; letter-spacing: 1px; color: #888; text-transform: uppercase; margin-top: 5px; }
+        
+        .nav-links { display: flex; align-items: center; }
+        .nav-links li { margin-left: 30px; }
+        .nav-links a { color: #333; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+        .nav-links a:hover { color: #b8860b; }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        /* --- HERO SPLIT SECTION --- */
+        .hero-split { height: 90vh; display: grid; grid-template-columns: 1fr 1fr; background: #f9f9f9; overflow: hidden; }
+        .hero-text { display: flex; align-items: center; justify-content: center; padding: 60px; }
+        .hero-content-inner { max-width: 550px; }
+        .welcome-txt { color: #b8860b; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 13px; margin-bottom: 10px; }
+        .main-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; line-height: 1.1; color: #1a1a1a; margin-bottom: 35px; }
+        
+        .reason-box { margin-bottom: 40px; }
+        .reason-item { display: flex; gap: 15px; margin-bottom: 25px; padding: 15px; border-radius: 8px; transition: 0.3s; }
+        .reason-item:hover { background: #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .reason-icon { font-size: 24px; }
+        .reason-info h4 { font-size: 15px; text-transform: uppercase; margin-bottom: 5px; color: #1a1a1a; }
+        .reason-info p { font-size: 13.5px; color: #666; }
+
+        .btn-zalo-hero {
+            background: #0068ff; color: #fff !important; padding: 18px 35px; border-radius: 50px;
+            font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 20px rgba(0,104,255,0.2);
         }
+        .btn-zalo-hero:hover { transform: translateY(-3px); background: #0056d2; }
 
-        .logo-area {
-            display: flex;
-            flex-direction: column;
-        }
+        .hero-img-box { position: relative; }
+        .hero-img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .img-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, #f9f9f9 0%, transparent 20%); }
 
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: #1a1a1a;
-            line-height: 1;
-        }
+        /* --- PRODUCTS SECTION --- */
+        .products { padding: 80px 0; background: #fff; }
+        .sec-header { text-align: center; margin-bottom: 50px; }
+        .sec-header h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 15px; }
+        .line { width: 60px; height: 3px; background: #b8860b; margin: 0 auto; }
+        
+        .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .p-card { border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .p-img { height: 350px; background-size: cover; background-position: center; }
+        .p-info { padding: 30px; text-align: center; }
 
-        .logo span {
-            color: #b8860b; /* Màu vàng đồng DarkGoldenRod */
-        }
+        /* --- MAP & CONTACT SECTION --- */
+        .contact-section { padding: 80px 0; background: #f4f4f4; }
+        .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        .map-box { border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); height: 450px; }
+        .info-box { padding: 20px; }
+        .info-item { margin-bottom: 30px; }
+        .info-item h5 { color: #b8860b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .info-item p { font-size: 18px; font-weight: 600; color: #1a1a1a; }
 
-        .slogan-mini {
-            font-size: 10px;
-            letter-spacing: 1px;
-            color: #888;
-            margin-top: 5px;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-left: 35px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 14px;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        nav ul li a:hover {
-            color: #b8860b;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            height: 85vh;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://images.unsplash.com/photo-1615873968403-89e068629375?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .hero-content h2 {
-            font-weight: 300;
-            letter-spacing: 4px;
-            margin-bottom: 30px;
-            font-size: 1.5rem;
-        }
-
-        .btn-zalo {
-            background: #0068ff;
-            color: #fff;
-            padding: 15px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            transition: 0.4s;
-            box-shadow: 0 4px 15px rgba(0,104,255,0.3);
-        }
-
-        .btn-zalo:hover {
-            transform: scale(1.05);
-            background: #0056d2;
-        }
-
-        /* PRODUCTS SECTION */
-        .products {
-            padding: 100px 0;
-            background: #fdfdfd;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .underline {
-            width: 80px;
-            height: 3px;
-            background: #b8860b;
-            margin: 0 auto;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        .product-card {
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .product-img {
-            height: 400px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .product-info {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .product-info h4 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        /* CONTACT SECTION */
-        .contact-info {
-            background: #1a1a1a;
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .contact-item h5 {
-            color: #b8860b;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #111;
-            color: #666;
-            text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid #222;
-            font-size: 13px;
-        }
-
-        /* Nút gọi nhanh cố định */
-        .fixed-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-        }
-
-        .call-btn {
-            background: #b8860b;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            animation: pulse 2s infinite;
+        /* --- FOOTER --- */
+        footer { background: #1a1a1a; color: #888; padding: 40px 0; text-align: center; font-size: 13px; }
+        
+        /* Floating Call Button */
+        .float-contact { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+        .call-btn { 
+            width: 60px; height: 60px; background: #b8860b; border-radius: 50%; color: #fff;
+            display: flex; align-items: center; justify-content: center; font-size: 24px;
+            box-shadow: 0 5px 20px rgba(184,134,11,0.4); animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
@@ -265,84 +95,118 @@
 
     <header>
         <nav class="container">
-            <div class="logo-area">
-                <div class="logo">TUẤN <span>HÙNG</span></div>
-                <div class="slogan-mini">Tôn vinh vẻ đẹp ngôi nhà bạn</div>
+            <div class="logo-box">
+                <div class="brand">TUẤN <span>HÙNG</span></div>
+                <div class="slogan">Tôn vinh vẻ đẹp ngôi nhà bạn</div>
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#trangchu">Trang chủ</a></li>
                 <li><a href="#sanpham">Sản phẩm</a></li>
                 <li><a href="#lienhe">Liên hệ</a></li>
-                <li><a href="https://zalo.me/0828800234" target="_blank" class="btn-zalo" style="padding: 8px 20px; margin-left: 20px;">Zalo: 0828.800.234</a></li>
+                <li><a href="tel:0828800234" style="color: #b8860b; font-weight: 700;">📞 0828.800.234</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="trangchu">
-        <div class="hero-content">
-            <h2>Chào mừng bạn đến với TUẤN HÙNG</h2>
-            <h1>TÔN VINH VẺ ĐẸP NGÔI NHÀ BẠN</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Chuyên cung cấp Trần Nano cao cấp & Cửa thép vân gỗ Alux chính hãng</p>
-            <a href="https://zalo.me/0828800234" target="_blank" class="btn-zalo">LIÊN HỆ MUA HÀNG QUA ZALO</a>
+    <section class="hero-split" id="trangchu">
+        <div class="hero-text">
+            <div class="hero-content-inner">
+                <div class="welcome-txt">Chào mừng đến với Nội Thất Tuấn Hùng</div>
+                <h1 class="main-title">TÔN VINH VẺ ĐẸP NGÔI NHÀ BẠN</h1>
+                
+                <div class="reason-box">
+                    <div class="reason-item">
+                        <div class="reason-icon">⭐</div>
+                        <div class="reason-info">
+                            <h4>Trần Nano Cao Cấp</h4>
+                            <p>Giải pháp chống ẩm mốc tuyệt đối, cách âm và cách nhiệt vượt trội cho mọi công trình.</p>
+                        </div>
+                    </div>
+                    <div class="reason-item">
+                        <div class="reason-icon">🛡️</div>
+                        <div class="reason-info">
+                            <h4>Cửa Thép Vân Gỗ Alux</h4>
+                            <p>An toàn như thép - Đẹp tựa gỗ tự nhiên. Không cong vênh, bền bỉ cùng năm tháng.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://zalo.me/0828800234" target="_blank" class="btn-zalo-hero">
+                    <span style="background:#fff; color:#0068ff; border-radius:50%; width:24px; height:24px; display:inline-flex; align-items:center; justify-content:center; font-weight:900;">Z</span>
+                    LIÊN HỆ MUA HÀNG QUA ZALO
+                </a>
+            </div>
+        </div>
+        <div class="hero-img-box">
+            <div class="img-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1618219951142-03219ef895c0?auto=format&fit=crop&w=1200&q=80" alt="Nội thất Tuấn Hùng">
         </div>
     </section>
 
     <section class="products" id="sanpham">
         <div class="container">
-            <div class="section-title">
-                <h3>SẢN PHẨM CHỦ ĐẠO</h3>
-                <div class="underline"></div>
+            <div class="sec-header">
+                <h2>SẢN PHẨM NỔI BẬT</h2>
+                <div class="line"></div>
             </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80')"></div>
-                    <div class="product-info">
-                        <h4>Trần Nano Cao Cấp</h4>
-                        <p>Chống ẩm mốc, cách âm, cách nhiệt hoàn hảo với đa dạng mẫu mã vân đá, vân gỗ sang trọng.</p>
+            <div class="p-grid">
+                <div class="p-card">
+                    <div class="p-img" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="p-info">
+                        <h4>Hệ Trần Nano Thông Minh</h4>
+                        <p>Thi công nhanh, sạch sẽ, mang lại không gian sang trọng và mát mẻ.</p>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=800&q=80')"></div>
-                    <div class="product-info">
-                        <h4>Cửa Thép Vân Gỗ Alux</h4>
-                        <p>An toàn tuyệt đối, không cong vênh, bền bỉ với thời gian. Mang lại vẻ ngoài đẳng cấp như gỗ tự nhiên.</p>
+                <div class="p-card">
+                    <div class="p-img" style="background-image: url('https://images.unsplash.com/photo-1506377585622-bedcbb027afc?auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="p-info">
+                        <h4>Cửa Thép Alux Chính Hãng</h4>
+                        <p>Họa tiết vân gỗ tinh xảo, chống trộm và chống cháy đạt chuẩn cao cấp.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact-info" id="lienhe">
+    <section class="contact-section" id="lienhe">
         <div class="container">
-            <div class="section-title">
-                <h3 style="color: white;">THÔNG TIN LIÊN HỆ</h3>
-                <div class="underline"></div>
+            <div class="sec-header">
+                <h2>LIÊN HỆ & VỊ TRÍ</h2>
+                <div class="line"></div>
             </div>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <h5>Địa chỉ</h5>
-                    <p>Đường Phan Bội Châu, Thôn 2,<br>xã Gio Linh, tỉnh Quảng Trị</p>
+            <div class="contact-wrapper">
+                <div class="info-box">
+                    <div class="info-item">
+                        <h5>Địa chỉ cửa hàng</h5>
+                        <p>Đường Phan Bội Châu, Thôn 2, xã Gio Linh, huyện Gio Linh, tỉnh Quảng Trị</p>
+                    </div>
+                    <div class="info-item">
+                        <h5>Số điện thoại tư vấn</h5>
+                        <p style="font-size: 28px; color: #b8860b;">0828.800.234</p>
+                    </div>
+                    <div class="info-item">
+                        <h5>Kết nối trực tuyến</h5>
+                        <a href="https://zalo.me/0828800234" target="_blank" style="color: #0068ff; font-weight: 700;">Chat Zalo với chúng tôi ngay ↗</a>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <h5>Hotline & Zalo</h5>
-                    <p style="font-size: 24px; font-weight: 700; color: #b8860b;">0828.800.234</p>
-                </div>
-                <div class="contact-item">
-                    <h5>Thời gian làm việc</h5>
-                    <p>Thứ 2 - Chủ Nhật<br>07:30 - 21:00</p>
+                <div class="map-box">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15277.632281248983!2d107.072234!3d16.911462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3140e60971b3052d%3A0x6d90d819890a8a65!2zR2lvIExpbmgsIFF14bqjbmcgVHLhu4ssIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1711000000000!5m2!1svi!2s" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="fixed-contact">
+    <div class="float-contact">
         <a href="tel:0828800234" class="call-btn">📞</a>
     </div>
 
     <footer>
         <div class="container">
             <p>&copy; 2026 TUẤN HÙNG - Thiết kế bởi Phuong Electronic</p>
-            <p style="margin-top: 5px; font-size: 11px;">Chất lượng tạo nên thương hiệu</p>
+            <p style="margin-top: 5px; opacity: 0.5;">Đường Phan Bội Châu, Thôn 2, xã Gio Linh, tỉnh Quảng Trị</p>
         </div>
     </footer>
 
